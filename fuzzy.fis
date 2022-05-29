@@ -1,0 +1,51 @@
+[System]
+Name='fuzzy'
+Type='mamdani'
+Version=2.0
+NumInputs=4
+NumOutputs=1
+NumRules=2
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='input1'
+Range=[0.8142 0.889716]
+NumMFs=2
+MF1='bad':'gaussmf',[0.03207 0.8142]
+MF2='good':'gaussmf',[0.03209 0.8893]
+
+[Input2]
+Name='input2'
+Range=[0.1108 0.1858]
+NumMFs=2
+MF1='good':'gaussmf',[0.03185 0.1108]
+MF2='bad':'gaussmf',[0.03185 0.1858]
+
+[Input3]
+Name='input3'
+Range=[0.4205 0.508755]
+NumMFs=2
+MF1='bad':'gaussmf',[0.03748 0.4205]
+MF2='good':'gaussmf',[0.03748 0.5088]
+
+[Input4]
+Name='input4'
+Range=[0.1483 0.185692]
+NumMFs=2
+MF1='bad':'gaussmf',[0.01588 0.1483]
+MF2='good':'gaussmf',[0.01588 0.1857]
+
+[Output1]
+Name='output1'
+Range=[0 1]
+NumMFs=2
+MF1='non_bankruptcy':'trimf',[-1 0 1]
+MF2='bankruptcy':'trimf',[0 1 2]
+
+[Rules]
+1 2 1 1, 2 (1) : 2
+2 1 2 2, 1 (1) : 2
