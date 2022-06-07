@@ -17,3 +17,4 @@
 mam_fis = readfis('fuzzy_new.fis');
 sug_fis = convertToSugeno(mam_fis);
 neuroFuzzyDesigner
+
