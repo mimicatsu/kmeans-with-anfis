@@ -34,14 +34,14 @@ First, I reselect the features in the two preprocessing files. To decrease the c
 Second, I import the preprocessing output dataset in the main programming files and reorder the dataset. Third, I use kmeans to get the membership functions. Finally, train the model by use the anfis package, and get the report. 
 
 After doing the above steps, I decide to use other models to train the datasets. And I also try to use MATLAB to process the ANFIS method. 
-After the comparison, I found that in the bankruptcy case, the performance: AdaBoost> SGDClassifer>anfis(MATLAB_Grid partition)>anfis(twmeggs)> anfis(Kmeans). In the dimonds case, the performance: anfis(MATLAB_Grid partition)> SGDRegressor> anfis(MATLAB_Grid partition).
+After the comparison, I found that in the bankruptcy case, the performance: AdaBoost> SGDClassifer>anfis(MATLAB_Grid partition)>anfis(twmeggs)> anfis(MATLAB_Kmeans). In the dimonds case, the performance: anfis(MATLAB_Grid partition)> SGDRegressor> anfis(twmeggs-k-means).
 
 HW3_bankruptcy:
 1.	Drop the dataset’s labels.
 2.	Use Kmeans(k=2) to get the membership function.
 3.	Output the membership relations number(mean/standard).
 4.	Import the anfis (gaussian method)package to train the data.
-5.	Predict the y_pred(if y_pred>=0.51, else0)
+5.	Predict the y_pred(if y_pred>=0.5-->1, else-->0)
 6.	Calculate the evaluation criterion, and get the classification report.
 
 HW3_dimonds:
